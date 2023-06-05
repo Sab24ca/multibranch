@@ -3,7 +3,7 @@ pipeline
     agent any
     stages
     {
-        stage('ContinuousDownload_Master')
+        stage('ContinuousDownload_Loans')
         {
             steps
             {
@@ -11,20 +11,18 @@ pipeline
                 {
                     cicd.Git("maven10")
                 }
-            }
+	    }
         }
-        stage('ContinuousBuild_Master')
-        {
-            steps
-            {
-                script
-                {
-                    cicd.Build()
-                }
-            }
-        }
-   }
+     }
+
 }
+
+
+
+
+
+
+
 
 
 
